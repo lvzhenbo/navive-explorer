@@ -64,6 +64,7 @@ declare global {
   const useNotification: typeof import('naive-ui').useNotification
   const useSlots: typeof import('vue').useSlots
   const useTemplateRef: typeof import('vue').useTemplateRef
+  const useThemeVars: typeof import('naive-ui').useThemeVars
   const watch: typeof import('vue').watch
   const watchEffect: typeof import('vue').watchEffect
   const watchPostEffect: typeof import('vue').watchPostEffect

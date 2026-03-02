@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { zhCN, dateZhCN, useOsTheme, darkTheme, lightTheme } from 'naive-ui';
+  import { FileExplorer } from '@/components/FileExplorer';
 
   const osThemeRef = useOsTheme();
   const theme = computed(() => {
@@ -13,7 +14,12 @@
       <NDialogProvider>
         <NMessageProvider>
           <NNotificationProvider>
-            <HelloWorld />
+            <NEl class="min-h-screen p-6 bg-(--body-color)">
+              <div class="max-w-300 mx-auto">
+                <h1 class="text-2xl font-bold mb-4 text-(--text-color-1)">云盘文件管理器</h1>
+                <FileExplorer initial-path="/" :show-statusbar="true" :height="600" />
+              </div>
+            </NEl>
           </NNotificationProvider>
         </NMessageProvider>
       </NDialogProvider>
